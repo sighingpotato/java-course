@@ -1,5 +1,6 @@
 package newcalculator;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
@@ -28,9 +29,10 @@ public class App {
             double result = calc.calculate(num1, num2, operator);
             System.out.println("결과: " + result);
 
-//            // 람다 스트림 이용
-//            System.out.println("저장된 연산 결과들 중 큰 값만 볼까요? (숫자 입력): ");
-//            double value = scanner.nextDouble();
+            // 람다 스트림 이용
+            System.out.println("저장된 연산 결과들 중 큰 값만 볼까요? (숫자 입력): ");
+            double value = scanner.nextDouble();
+            List<Double> box = calc.big(value);
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String exitStr = scanner.nextLine();
